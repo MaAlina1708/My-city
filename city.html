@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capital of Ukraine</title>
+  </head>
+  <style>
+    body {
+      text-align: center;
+      padding: 10px;
+      max-width: 70%;
+      border-radius: 10px;
+      border-color: gray;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: black;
+      font-size: 25px;
+      font-family: Georgia, "Times New Roman", Times, serif;
+    }
+    h2 {
+      text-align: center;
+      font-size: 17px;
+      color: black;
+      border: 1px solid black;
+      line-height: 20px;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      border-radius: 5px;
+      margin-block: 5px;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 50%;
+    }
+    .aboutKyiv {
+      display: block;
+      margin: 0 auto;
+      text-align: left;
+      font-size: 20px;
+      padding: 10px;
+      line-height: 30px;
+    }
+    .learnMore {
+      display: block;
+      margin-top: 10;
+      padding-right: 0px;
+      color: blue;
+      margin-bottom: 0px;
+      text-decoration: none;
+      padding: 5px;
+      text-align: left;
+    }
+
+    .builtBy {
+      text-align: center;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-size: 12px;
+      color: black;
+    }
+    .toSee,
+    .toStay {
+      display: inline-block;
+      margin: 10px;
+      background-color: grey;
+      color: black;
+      padding: 5px;
+      font-size: 10px;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      border-radius: 5px;
+      border: 0cm;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+      transition: all 150ms ease-in-out;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <h1>Welcome to Ukraine</h1>
+    <h2>Everything starts in Kyiv</h2>
+    <br />
+    <img
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/039/113/original/Bell-tower-and-Saint-Sophia_s-Cathedral-shot-at-dusk-KyivUkraine-Ruslan-Kalnitsky.Shutterstockjpg-2048x1534.jpg?1656620570"
+      alt="Kyiv city"
+    />
+    <br />
+    <p>
+      Kyiv is one of the largest and oldest cities in Europe. Its one and a half
+      thousand year history is shrouded in myths and legends. Kyiv is based on
+      the slopes of the Dnieper, one of the most powerful waterways in Eastern
+      Europe. Today, more than 3 million people live in the capital of Ukraine.
+    </p>
+    <small
+      ><a
+        href=" https://en.wikipedia.org/wiki/Kyiv"
+        target="_blank"
+        class="learnMore"
+      >
+        Learn more on WikipediA
+      </a>
+    </small>
+    <br />
+    <button class="toSee">What to see?</button>
+    <button class="toStay">Where to stay?</button>
+    <p class="builtBy">This page was built by Mastega Alina</p>
+    <script>
+      function toSee() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email?");
+        let cityPass = prompt(
+          " Would you like to have City Pass?"
+        ).toLowerCase();
+        trim();
+        if (cityPass === "yes") {
+          alert(name + ", your City Pass is on the way.");
+        } else alert(name + ", ourgide on its way.");
+      }
+      let toSeeButton = document.querySelector(".toSee");
+      toSeeButton.addEventListener("click", toSee);
+      function toStay() {
+        let name = prompt("What is your name?");
+        let hotel = prompt("Would you like to stay inhotel?")
+          .toLowerCase()
+          .trim();
+        if (hotel === "yes") {
+          alert(name + " ,please visit booking.com.");
+        } else alert(name + " please checkappartments.com.");
+      }
+      let toStayButton = document.querySelector(".toStay");
+      toStayButton.addEventListener("click", toStay);
+    </script>
+  </body>
+</html>
